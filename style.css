@@ -19,6 +19,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -563,11 +564,119 @@ p {
 
   .footer-inner {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .footer-inner p {
-    text-align: left;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: min(100% - 24px, 1120px);
+  }
+
+  .hero {
+    padding: 4px 0 8px;
+  }
+
+  .hero::before {
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.34) 0%, rgba(0, 0, 0, 0.38) 42%, rgba(0, 0, 0, 0.62) 100%),
+      radial-gradient(circle at 50% 96%, rgba(214, 170, 69, 0.12), transparent 40%);
+  }
+
+  .hero::after {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.14) 0%, rgba(0, 0, 0, 0.48) 48%, rgba(0, 0, 0, 0.88) 100%);
+  }
+
+  .hero-media {
+    width: 100%;
+    padding-inline: 0;
+  }
+
+  .hero-content {
+    display: flex;
+    justify-content: center;
+    padding-inline: 12px;
+    margin-bottom: 6px;
+  }
+
+  .home-link-grid {
+    width: min(100%, 390px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .nav-button {
+    min-height: 42px;
+    padding: 8px 10px;
+    border-radius: 12px;
+    background: rgba(5, 5, 5, 0.78);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.34);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    backdrop-filter: blur(12px);
+  }
+
+  .nav-button-line {
+    grid-column: 1 / -1;
+  }
+
+  .site-footer {
+    padding: 22px 0 14px;
+  }
+
+  .footer-inner {
+    width: min(100% - 24px, 1120px);
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-brand {
+    justify-content: center;
+    width: 100%;
+    max-width: 90vw;
+    min-width: 0;
+    padding: 2px 0;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .footer-brand .brand-logo {
+    max-width: 90vw;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .footer-brand-text,
+  .footer-company {
+    max-width: 90vw;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .footer-inner p {
+    max-width: 90vw;
+    margin-inline: auto;
+    font-size: 0.72rem;
+    line-height: 1.6;
+    text-align: center;
+    overflow-wrap: anywhere;
   }
 }
 
@@ -576,7 +685,7 @@ p {
     width: min(100% - 24px, 1120px);
   }
 
-  .brand span {
+  .site-header .brand span {
     max-width: 260px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -586,9 +695,10 @@ p {
   .footer-brand,
   .footer-brand .footer-brand-text,
   .footer-brand .footer-brand-text span {
-    max-width: none;
+    max-width: 90vw;
     overflow: visible;
     text-overflow: clip;
+    white-space: normal;
   }
 
   .site-nav {
@@ -605,7 +715,17 @@ p {
   }
 
   .home-link-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nav-button {
+    min-height: 40px;
+    padding: 7px 8px;
+    font-size: 0.68rem;
+  }
+
+  .nav-button-line {
+    grid-column: 1 / -1;
   }
 
   .intro-card,
