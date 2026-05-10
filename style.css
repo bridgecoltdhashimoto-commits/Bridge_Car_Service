@@ -155,8 +155,10 @@ img {
 }
 
 .home-page .hero-image {
-  height: min(82svh, 820px);
-  min-height: min(52vw, 420px);
+  height: auto;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center top;
 }
 
 .intro-section,
@@ -396,23 +398,39 @@ p {
 
 .footer-brand {
   align-items: center;
+  gap: clamp(12px, 2vw, 18px);
+  min-width: min(100%, 360px);
+  padding: 8px 0;
+}
+
+.footer-brand .brand-logo {
+  width: clamp(54px, 6vw, 68px);
+  height: clamp(54px, 6vw, 68px);
+  border-color: rgba(244, 217, 141, 0.72);
+  box-shadow: 0 0 28px rgba(214, 170, 69, 0.18);
 }
 
 .footer-brand-text {
   display: grid;
-  gap: 3px;
+  gap: 4px;
+  min-width: 0;
 }
 
 .footer-company {
   color: var(--gold-soft);
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
-  letter-spacing: 0.1em;
+  font-size: clamp(1.18rem, 2.8vw, 1.55rem);
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  text-shadow: 0 0 18px rgba(214, 170, 69, 0.22);
+  white-space: nowrap;
 }
 
 .footer-service {
-  color: rgba(255, 255, 255, 0.68);
-  font-size: 0.68rem;
-  letter-spacing: 0.22em;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: clamp(0.68rem, 1.6vw, 0.78rem);
+  letter-spacing: 0.2em;
+  line-height: 1.25;
+  white-space: nowrap;
 }
 
 .footer-inner p {
@@ -461,7 +479,14 @@ p {
   .hero-image {
     height: 68svh;
     min-height: 360px;
-    object-position: center 46%;
+    object-position: center top;
+  }
+
+  .home-page .hero-image {
+    height: clamp(320px, 72vw, 460px);
+    min-height: 0;
+    object-fit: cover;
+    object-position: center top;
   }
 
   .intro-section,
@@ -526,8 +551,9 @@ p {
 
   .hero-image,
   .home-page .hero-image {
-    height: 62svh;
-    min-height: 320px;
+    height: clamp(280px, 76vw, 360px);
+    min-height: 0;
+    object-position: center top;
   }
 
   .home-link-grid {
