@@ -127,41 +127,82 @@ img {
 
 .hero {
   position: relative;
+  display: grid;
+  align-items: center;
+  min-height: clamp(640px, 86svh, 900px);
   width: 100%;
   overflow: hidden;
   margin: 0;
-  line-height: 0;
+  isolation: isolate;
   background: var(--black);
   border-bottom: 1px solid rgba(214, 170, 69, 0.34);
   box-shadow: var(--shadow);
 }
 
+.hero::before,
 .hero::after {
   position: absolute;
   inset: 0;
   pointer-events: none;
   content: "";
+}
+
+.hero::before {
+  z-index: -1;
   background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.16)),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.46) 44%, rgba(0, 0, 0, 0.78)),
+    radial-gradient(circle at 26% 42%, rgba(214, 170, 69, 0.22), transparent 34%);
+}
+
+.hero::after {
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.34)),
     radial-gradient(circle at 50% 100%, rgba(214, 170, 69, 0.22), transparent 38%);
 }
 
-.hero-image {
-  width: 100%;
-  height: min(74svh, 760px);
-  min-height: 420px;
-  object-fit: cover;
-  object-position: center 46%;
+.hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image: url("assets/hero-engine-background.svg");
+  background-position: center;
+  background-size: cover;
+  transform: scale(1.02);
 }
 
-.home-page .hero-image {
-  height: auto;
-  min-height: 0;
-  object-fit: contain;
-  object-position: center top;
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-block: clamp(74px, 12vw, 150px);
 }
 
-.intro-section,
+.hero-company {
+  margin: 0 0 12px;
+  color: var(--gold-soft);
+  font-size: clamp(1rem, 2.4vw, 1.45rem);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 28px rgba(214, 170, 69, 0.32);
+}
+
+.hero-content h1 {
+  max-width: 820px;
+  margin: 0 0 22px;
+  font-size: clamp(3.4rem, 9vw, 8.8rem);
+  letter-spacing: -0.075em;
+  text-shadow: 0 18px 58px rgba(0, 0, 0, 0.72);
+}
+
+.hero-description {
+  max-width: 760px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: clamp(1.02rem, 2.4vw, 1.35rem);
+  font-weight: 500;
+  line-height: 1.95;
+}
+
 .page-main {
   padding: clamp(42px, 8vw, 96px) 0 clamp(72px, 10vw, 128px);
 }
@@ -476,17 +517,27 @@ p {
     padding: 5px 12px;
   }
 
-  .hero-image {
-    height: 68svh;
-    min-height: 360px;
-    object-position: center top;
+  .hero {
+    min-height: auto;
   }
 
-  .home-page .hero-image {
-    height: clamp(320px, 72vw, 460px);
-    min-height: 0;
-    object-fit: cover;
-    object-position: center top;
+  .hero::before {
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.5) 48%, rgba(0, 0, 0, 0.86)),
+      radial-gradient(circle at 50% 34%, rgba(214, 170, 69, 0.2), transparent 42%);
+  }
+
+  .hero-background {
+    background-position: center top;
+  }
+
+  .hero-content {
+    padding-block: clamp(64px, 16vw, 110px);
+    text-align: center;
+  }
+
+  .hero-description {
+    margin-inline: auto;
   }
 
   .intro-section,
@@ -549,11 +600,17 @@ p {
     font-size: 0.66rem;
   }
 
-  .hero-image,
-  .home-page .hero-image {
-    height: clamp(280px, 76vw, 360px);
-    min-height: 0;
-    object-position: center top;
+  .hero-content {
+    padding-block: 56px 66px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.62rem, 16vw, 4.5rem);
+    letter-spacing: -0.08em;
+  }
+
+  .hero-description br {
+    display: none;
   }
 
   .home-link-grid {
