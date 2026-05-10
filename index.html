@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="BRIDGE CAR SERVICEは、車検・整備・販売・買取・板金塗装・カスタムまで大切なお車を丁寧にサポートする自動車サービスです。公式LINEから写真や車検証をお送りください。"
+      content="BRIDGE CAR SERVICEは、車販売・車検整備・修理鈑金・名義変更などの相談を公式LINEから受け付けています。無理な押し売りをせず、お車に合わせて丁寧にご案内します。"
     />
-    <title>BRIDGE CAR SERVICE | 車検・整備・販売・買取・カスタム</title>
+    <title>BRIDGE CAR SERVICE | 車販売・車検整備・修理相談</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,282 +19,109 @@
   <body>
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="BRIDGE CAR SERVICE トップへ戻る">
-        <img src="assets/bridge-logo.png" alt="BRIDGE ロゴ" class="brand-logo" />
-        <span class="brand-text">
-          <strong>BRIDGE</strong>
-          <small>CAR SERVICE</small>
-        </span>
+        <img src="assets/bridge-logo.png" alt="BRIDGE CAR SERVICE ロゴ" class="brand-logo" />
+        <span>BRIDGE</span>
       </a>
       <nav class="site-nav" aria-label="主要メニュー">
-        <a href="#services">対応メニュー</a>
-        <a href="#garage">車屋の強み</a>
-        <a href="#flow">ご相談の流れ</a>
-        <a href="#shop">店舗情報</a>
+        <a href="#services">Services</a>
+        <a href="#reason">Reason</a>
+        <a href="#contact">Contact</a>
       </nav>
-      <a class="line-button header-line" href="https://lin.ee/6rWbGmY" target="_blank" rel="noreferrer">公式LINEで相談</a>
     </header>
 
     <main id="top">
       <section class="hero" aria-label="BRIDGE CAR SERVICE ファーストビュー">
-        <div class="hero-backdrop" aria-hidden="true">
-          <div class="garage-lines"></div>
-          <div class="light-beam beam-left"></div>
-          <div class="light-beam beam-right"></div>
+        <div class="hero-bg" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <div class="hero-logo-badge">
-              <img src="assets/bridge-logo.png" alt="BRIDGE ロゴ" />
-              <span>Automotive Sales / Maintenance / Custom</span>
-            </div>
-            <p class="eyebrow">車屋・整備工場・カスタムショップ</p>
-            <h1>車検・整備・販売・買取・カスタムまで、大切なお車を丁寧にサポート</h1>
-            <p class="hero-lead">
-              お車の状態やご希望を確認しながら、必要な内容を分かりやすくご案内します。まずは公式LINEから写真や車検証をお送りください。
-            </p>
-            <div class="hero-actions">
-              <a class="line-button primary" href="https://lin.ee/6rWbGmY" target="_blank" rel="noreferrer">公式LINEで写真を送る</a>
-              <a class="ghost-button" href="#services">対応メニューを見る</a>
-            </div>
-            <p class="cost-note">
-              費用については、お車の状態・作業内容・部品・追加作業の有無により変わるため、事前確認後にご案内します。
-            </p>
+        <div class="container hero-inner">
+          <div class="hero-logo-wrap">
+            <img src="assets/bridge-logo.png" alt="BRIDGE CAR SERVICE ロゴ" class="hero-logo" />
           </div>
-
-          <div class="hero-visual" aria-label="整備ガレージと車両イメージ">
-            <div class="shop-sign">BRIDGE GARAGE</div>
-            <div class="tool tool-wrench" aria-hidden="true">🔧</div>
-            <div class="tool tool-spark" aria-hidden="true">✦</div>
-            <div class="garage-door" aria-hidden="true"></div>
-            <div class="car-stage" aria-hidden="true">
-              <svg class="car-illustration" viewBox="0 0 720 360" role="img" aria-label="車体・ライト・ホイールのイメージ">
-                <defs>
-                  <linearGradient id="carPaint" x1="0" x2="1" y1="0" y2="1">
-                    <stop offset="0" stop-color="#f7e7b1" />
-                    <stop offset="0.24" stop-color="#d4a547" />
-                    <stop offset="0.52" stop-color="#5b421c" />
-                    <stop offset="1" stop-color="#0b0b0c" />
-                  </linearGradient>
-                  <linearGradient id="windowPaint" x1="0" x2="1">
-                    <stop offset="0" stop-color="#2c3742" />
-                    <stop offset="1" stop-color="#060707" />
-                  </linearGradient>
-                  <filter id="glow">
-                    <feGaussianBlur stdDeviation="4" result="blur" />
-                    <feMerge>
-                      <feMergeNode in="blur" />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
-                </defs>
-                <path d="M95 226c31-72 83-111 160-120l90-11c96-12 175 16 238 79l41 41 55 14c13 3 22 15 22 28v26H54v-18c0-22 18-39 41-39Z" fill="url(#carPaint)" />
-                <path d="M245 122c45-45 98-62 168-56 62 6 110 33 150 88l-330 12 12-44Z" fill="url(#windowPaint)" stroke="#d8af5b" stroke-width="5" />
-                <path d="M256 122h129l-17 44H230l26-44Zm158-1c55 3 95 22 128 63l-145-18 17-45Z" fill="#101416" opacity=".92" />
-                <path d="M96 226h505c38 0 70 29 73 67H60c6-38 17-58 36-67Z" fill="#171717" opacity=".82" />
-                <path d="M591 217l76 16c15 3 27 15 31 30l-84-8c-19-2-31-21-23-38Z" fill="#f3cf73" filter="url(#glow)" />
-                <path d="M98 232l-35 31h90c15 0 28-9 34-23l3-8H98Z" fill="#fff0b7" filter="url(#glow)" />
-                <circle cx="190" cy="284" r="58" fill="#050505" stroke="#d8af5b" stroke-width="8" />
-                <circle cx="190" cy="284" r="28" fill="#2b2b2b" stroke="#f6df9d" stroke-width="5" />
-                <circle cx="552" cy="284" r="58" fill="#050505" stroke="#d8af5b" stroke-width="8" />
-                <circle cx="552" cy="284" r="28" fill="#2b2b2b" stroke="#f6df9d" stroke-width="5" />
-                <path d="M111 214c139-13 282-21 506-3" fill="none" stroke="#f8e0a0" stroke-width="7" stroke-linecap="round" opacity=".72" />
-                <path d="M305 205h83" stroke="#d8af5b" stroke-width="5" stroke-linecap="round" opacity=".7" />
-              </svg>
-              <div class="floor-reflection"></div>
-            </div>
-            <div class="hero-tags">
-              <span>車検</span>
-              <span>整備</span>
-              <span>販売・買取</span>
-              <span>板金塗装</span>
-              <span>カスタム</span>
-            </div>
-          </div>
+          <p class="eyebrow">Automotive Sales & Maintenance</p>
+          <h1>車のこと、まずは安心して相談できる場所へ。</h1>
+          <p class="hero-lead">販売・車検整備・修理鈑金・各種手続きまで、必要なことを分かりやすくご案内します。</p>
+          <a class="line-button hero-button" href="https://lin.ee/6rWbGmY" target="_blank" rel="noreferrer">公式LINEで相談する</a>
         </div>
       </section>
 
-      <section class="intro section-light" id="garage">
-        <div class="container intro-grid">
-          <div>
-            <p class="eyebrow dark">BRIDGE CAR SERVICE</p>
-            <h2>販売店・整備工場・ガレージの相談窓口として、車の困りごとをまとめて受付。</h2>
-          </div>
-          <div class="intro-panel">
-            <p>
-              車検の時期、気になる異音、外装のキズ、理想のカスタム、購入や売却の不安まで。BRIDGE CAR SERVICEは、まず状態とご希望を確認し、必要な確認事項を整理してから進めます。
-            </p>
-            <p>
-              お車ごとの状態・作業内容・部品・追加作業の有無を確認し、事前確認後に分かりやすくご案内します。
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="services" id="services">
+      <section class="section services" id="services">
         <div class="container">
-          <div class="section-heading centered">
-            <p class="eyebrow dark">SERVICE MENU</p>
-            <h2>対応メニュー</h2>
-            <p>点検・整備から販売、買取、外装、電装、カスタムまで、お車に関する相談を幅広く承ります。</p>
+          <div class="section-heading">
+            <p class="eyebrow dark">Services</p>
+            <h2>ご相談いただけること</h2>
+            <p>お車の状態やご希望に合わせて、必要な内容だけを整理してご案内します。</p>
           </div>
-          <div class="service-grid">
+          <div class="card-grid service-grid">
             <article class="service-card">
-              <span class="service-icon" aria-hidden="true">🧰</span>
-              <strong>01</strong>
-              <h3>車検・整備・書類手続き</h3>
-              <p>車検前の確認、消耗品の点検、名義変更などの書類手続きを分かりやすくサポートします。</p>
+              <span class="card-number">01</span>
+              <h3>車販売</h3>
+              <p>用途・ご予算感・好みに合わせた一台を一緒に考えます。</p>
             </article>
             <article class="service-card">
-              <span class="service-icon" aria-hidden="true">✨</span>
-              <strong>02</strong>
-              <h3>洗車・内外装・コーティング</h3>
-              <p>ボディ、室内、樹脂パーツなどの状態を見ながら、お車の印象を整えるケアをご案内します。</p>
+              <span class="card-number">02</span>
+              <h3>車検・整備</h3>
+              <p>点検内容を分かりやすく共有し、安心して乗れる状態へ。</p>
             </article>
             <article class="service-card">
-              <span class="service-icon" aria-hidden="true">🎨</span>
-              <strong>03</strong>
-              <h3>板金・塗装・エアロカスタム</h3>
-              <p>キズやへこみ、外装パーツ、エアロのご相談まで、仕上がりの希望を伺いながら進めます。</p>
+              <span class="card-number">03</span>
+              <h3>修理・鈑金相談</h3>
+              <p>キズ、へこみ、不調など、写真からでもお気軽にご相談ください。</p>
             </article>
             <article class="service-card">
-              <span class="service-icon" aria-hidden="true">🚘</span>
-              <strong>04</strong>
-              <h3>車両購入・買取</h3>
-              <p>購入前の不安や売却時の確認事項を整理し、大切なお車の次の一歩をお手伝いします。</p>
-            </article>
-            <article class="service-card">
-              <span class="service-icon" aria-hidden="true">💡</span>
-              <strong>05</strong>
-              <h3>電装系カスタム</h3>
-              <p>ドラレコ、ナビ、ライト類、快適装備など、使いやすさと安全性に配慮してご相談を承ります。</p>
-            </article>
-            <article class="service-card highlight-card">
-              <span class="service-icon" aria-hidden="true">💬</span>
-              <strong>06</strong>
-              <h3>その他お車の相談</h3>
-              <p>症状がはっきりしない場合も、公式LINEで写真や状況をお送りください。確認ポイントからご案内します。</p>
+              <span class="card-number">04</span>
+              <h3>名義変更・各種手続き相談</h3>
+              <p>書類や手続きで不安な点も、流れを整理してサポートします。</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="garage-section section-dark">
-        <div class="container garage-grid">
-          <div class="garage-photo" aria-label="工具とガレージのイメージ">
-            <div class="photo-toolbox">TOOLS</div>
-            <div class="photo-lift"></div>
-            <div class="photo-wheel"></div>
+      <section class="section reason" id="reason">
+        <div class="container reason-panel">
+          <div class="section-heading align-left">
+            <p class="eyebrow">Reason</p>
+            <h2>押し売りではなく、納得できる相談を。</h2>
+            <p>はじめての方でも話しやすいよう、落ち着いた対応と丁寧な確認を大切にしています。</p>
           </div>
-          <div>
-            <p class="eyebrow">WHY CHOOSE US</p>
-            <h2>車体・ライト・ホイール・工具まで、車屋らしい現場感を大切に。</h2>
-            <div class="reason-list">
-              <article>
-                <h3>状態確認を前提にご案内</h3>
-                <p>車種、年式、症状、写真、車検証などを確認し、必要な内容を整理してからご案内します。</p>
-              </article>
-              <article>
-                <h3>販売・整備・外装・電装をまとめて相談</h3>
-                <p>複数の相談を別々に説明する手間を減らし、お車の目的に合わせて進め方を組み立てます。</p>
-              </article>
-              <article>
-                <h3>公式LINEで気軽にスタート</h3>
-                <p>来店前に写真や車検証を送れるため、相談内容を共有しやすく、確認もスムーズです。</p>
-              </article>
-            </div>
+          <div class="reason-grid">
+            <article>
+              <h3>相談しやすい</h3>
+              <p>公式LINEから、写真や状況を送るだけでスタートできます。</p>
+            </article>
+            <article>
+              <h3>車に合わせた案内</h3>
+              <p>車種・状態・使い方を確認し、必要な選択肢をお伝えします。</p>
+            </article>
+            <article>
+              <h3>無理な押し売りなし</h3>
+              <p>迷っている段階でも大丈夫。納得感を優先してご案内します。</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="flow section-light" id="flow">
-        <div class="container flow-grid">
-          <div class="section-heading sticky-heading">
-            <p class="eyebrow dark">FLOW</p>
-            <h2>ご相談の流れ</h2>
-            <p>まずは公式LINEから。お車の状態とご希望を確認してから、必要な内容をご案内します。</p>
-          </div>
-          <ol class="flow-list">
-            <li>
-              <span>STEP 01</span>
-              <h3>公式LINEを追加</h3>
-              <p>気になる症状、希望メニュー、車種や年式など、分かる範囲でお知らせください。</p>
-            </li>
-            <li>
-              <span>STEP 02</span>
-              <h3>写真・車検証・状況を送付</h3>
-              <p>外装、メーター、車検証、気になる箇所の写真があると確認がスムーズです。</p>
-            </li>
-            <li>
-              <span>STEP 03</span>
-              <h3>状態と作業内容を確認</h3>
-              <p>お車の状態・作業内容・部品・追加作業の有無を確認し、進め方をご案内します。</p>
-            </li>
-            <li>
-              <span>STEP 04</span>
-              <h3>ご納得後に対応開始</h3>
-              <p>内容をご確認いただいてから、整備・手続き・カスタムなど必要な対応に進みます。</p>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section class="line-cta" aria-label="公式LINEへのお問い合わせ">
-        <div class="container cta-panel">
-          <img src="assets/bridge-logo.png" alt="BRIDGE ロゴ" class="cta-logo" />
-          <div>
-            <p class="eyebrow dark">CONTACT BY LINE</p>
-            <h2>写真や車検証を送って、まずはお車の相談から。</h2>
-            <p>
-              費用については、お車の状態・作業内容・部品・追加作業の有無により変わるため、事前確認後にご案内します。
-            </p>
-          </div>
-          <a class="line-button cta-line" href="https://lin.ee/6rWbGmY" target="_blank" rel="noreferrer">公式LINEで相談する</a>
-        </div>
-      </section>
-
-      <section class="shop section-light" id="shop">
-        <div class="container shop-card">
-          <div>
-            <p class="eyebrow dark">SHOP INFO</p>
-            <h2>店舗情報</h2>
-            <p>ご来店前の確認・ご相談は公式LINEからお願いいたします。お車の情報を確認し、必要な内容をご案内します。</p>
-          </div>
-          <dl class="info-list">
-            <div>
-              <dt>屋号</dt>
-              <dd>BRIDGE CAR SERVICE</dd>
-            </div>
-            <div>
-              <dt>対応内容</dt>
-              <dd>車検・整備・販売・買取・洗車・コーティング・板金塗装・エアロ・電装カスタム・書類手続き</dd>
-            </div>
-            <div>
-              <dt>相談方法</dt>
-              <dd>公式LINEから写真・車検証・ご希望内容をお送りください。</dd>
-            </div>
-          </dl>
+      <section class="contact" id="contact" aria-label="お問い合わせ">
+        <div class="container contact-card">
+          <img src="assets/bridge-logo.png" alt="BRIDGE CAR SERVICE ロゴ" class="contact-logo" />
+          <p class="eyebrow dark">Contact</p>
+          <h2>お車の相談は公式LINEへ</h2>
+          <p>気になる箇所の写真、車種、状況を送ってください。確認後、必要な流れをご案内します。</p>
+          <a class="line-button" href="https://lin.ee/6rWbGmY" target="_blank" rel="noreferrer">公式LINEで相談する</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <a class="brand footer-brand" href="#top" aria-label="BRIDGE CAR SERVICE トップへ戻る">
-            <img src="assets/bridge-logo.png" alt="BRIDGE ロゴ" class="brand-logo" />
-            <span class="brand-text">
-              <strong>BRIDGE</strong>
-              <small>CAR SERVICE</small>
-            </span>
-          </a>
-          <p>車検・整備・販売・買取・板金・カスタムまで、大切なお車を丁寧にサポートします。</p>
-        </div>
-        <div class="footer-actions">
-          <a class="footer-link" href="#services">対応メニュー</a>
-          <a class="line-button" href="https://lin.ee/6rWbGmY" target="_blank" rel="noreferrer">公式LINE</a>
-        </div>
+      <div class="container footer-inner">
+        <a class="brand footer-brand" href="#top" aria-label="BRIDGE CAR SERVICE トップへ戻る">
+          <img src="assets/bridge-logo.png" alt="BRIDGE CAR SERVICE ロゴ" class="brand-logo" />
+          <span>BRIDGE CAR SERVICE</span>
+        </a>
+        <p>© BRIDGE CAR SERVICE. All rights reserved.</p>
       </div>
-      <p class="copyright">© BRIDGE CAR SERVICE. All rights reserved.</p>
     </footer>
 
     <a class="floating-line" href="https://lin.ee/6rWbGmY" target="_blank" rel="noreferrer">公式LINEで相談</a>
