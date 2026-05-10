@@ -431,39 +431,38 @@ p {
 }
 
 .footer-brand {
+  display: inline-flex;
   align-items: center;
-  gap: clamp(12px, 2vw, 18px);
-  min-width: min(100%, 360px);
-  padding: 8px 0;
-}
-
-.footer-brand .brand-logo {
-  width: clamp(54px, 6vw, 68px);
-  height: clamp(54px, 6vw, 68px);
-  border-color: rgba(244, 217, 141, 0.72);
-  box-shadow: 0 0 28px rgba(214, 170, 69, 0.18);
-}
-
-.footer-brand-text {
-  display: grid;
-  gap: 4px;
+  flex: 0 0 auto;
   min-width: 0;
-}
-
-.footer-company {
+  padding: 6px 0;
   color: var(--gold-soft);
-  font-size: clamp(1.18rem, 2.8vw, 1.55rem);
-  letter-spacing: 0.02em;
-  line-height: 1.05;
-  text-shadow: 0 0 18px rgba(214, 170, 69, 0.22);
+  font-family: Georgia, "Times New Roman", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(1.5rem, 3vw, 2.55rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-shadow:
+    0 0 16px rgba(214, 170, 69, 0.22),
+    0 2px 12px rgba(0, 0, 0, 0.72);
   white-space: nowrap;
 }
 
+.footer-brand .brand-logo,
 .footer-service {
-  color: rgba(255, 255, 255, 0.72);
-  font-size: clamp(0.68rem, 1.6vw, 0.78rem);
-  letter-spacing: 0.2em;
-  line-height: 1.25;
+  display: none;
+}
+
+.footer-brand-text {
+  display: block;
+}
+
+.footer-company {
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  text-shadow: inherit;
   white-space: nowrap;
 }
 
@@ -584,6 +583,7 @@ p {
     white-space: nowrap;
   }
 
+  .footer-brand,
   .footer-brand .footer-brand-text,
   .footer-brand .footer-brand-text span {
     max-width: none;
